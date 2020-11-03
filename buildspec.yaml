@@ -5,7 +5,7 @@ phases:
       java: openjdk8
   pre_build:
     commands:
-    - echo Logging in to Amazon ECR...
+    - echo Logging in to Amazon ECR Ruchit...
     - aws --version
     - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
     - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
